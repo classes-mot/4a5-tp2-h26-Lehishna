@@ -1,0 +1,223 @@
+{
+  "info": {
+    "_postman_id": "8162fb6a-9184-4cd4-9d6c-853c9d1df92c",
+    "name": "tp02",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "53365622",
+    "_collection_link": "https://go.postman.co/collection/53365622-8162fb6a-9184-4cd4-9d6c-853c9d1df92c?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "api/jeux",
+      "item": [
+        {
+          "name": "Add Jeu",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OWQ5MTUzNmY2YWRmNzljZDNhNTEzYmYiLCJlbWFpbCI6ImphbWVzQGhvdG1haWwuY29tIiwiaWF0IjoxNzc1ODM0NDQzLCJleHAiOjE3NzU4MzgwNDN9.DySu-cLDuYCtZCAYJNAJFuauReUD_wYl43kcb7zwPTI",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"title\": \"Catan\",\r\n  \"description\": \"Un jeu de stratégie classique où les joueurs colonisent une île.\",\r\n  \"categorie\": \"Stratégie\",\r\n  \"nbJoueurs\": \"3-4 joueurs\",\r\n  \"editeur\": \"Kosmos\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/jeux",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "jeux"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Jeux",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/jeux",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "jeux"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "MAJ Jeu",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OWQ5MTUzNmY2YWRmNzljZDNhNTEzYmYiLCJlbWFpbCI6ImphbWVzQGhvdG1haWwuY29tIiwiaWF0IjoxNzc1ODM0NDQzLCJleHAiOjE3NzU4MzgwNDN9.DySu-cLDuYCtZCAYJNAJFuauReUD_wYl43kcb7zwPTI",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"title\": \"Catan - Edition Deluxe\",\r\n  \"description\": \"Nouvelle version avec des pièces en bois et une carte agrandie.\",\r\n  \"categorie\": \"Stratégie\",\r\n  \"nbJoueurs\": \"3-4 joueurs\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/jeux/69d917312647e0dbc7f47f14",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "jeux",
+                "69d917312647e0dbc7f47f14"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Supprimer Jeu",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OWQ5MTUzNmY2YWRmNzljZDNhNTEzYmYiLCJlbWFpbCI6ImphbWVzQGhvdG1haWwuY29tIiwiaWF0IjoxNzc1ODM0NDQzLCJleHAiOjE3NzU4MzgwNDN9.DySu-cLDuYCtZCAYJNAJFuauReUD_wYl43kcb7zwPTI",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/jeux/69d917312647e0dbc7f47f14",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "jeux",
+                "69d917312647e0dbc7f47f14"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "/api/users",
+      "item": [
+        {
+          "name": "Inscription(USER)",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"James David\",\r\n  \"email\": \"James@hotmail.com\",\r\n  \"password\": \"password12345\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/users/register",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "users",
+                "register"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Connexion(USER)",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"email\": \"james@hotmail.com\",\r\n  \"password\": \"password12345\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/users/login",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "users",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": ""
+    }
+  ]
+}
